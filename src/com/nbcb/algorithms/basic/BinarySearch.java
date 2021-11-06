@@ -2,6 +2,7 @@ package com.nbcb.algorithms.basic;
 
 /**
  * binary search
+ * 整体思路还是比较清晰的
  */
 public class BinarySearch {
 
