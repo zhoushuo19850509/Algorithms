@@ -4,6 +4,7 @@ import java.util.Stack;
 
 /**
  * 通过Stack这个数据结构，实现对表达式的解析、运算
+ * 这个算法的关键点是，用到了Stack后进先出(LIFO)的特点，保存表达式的各个元素
  */
 public class Evaluate {
     public static void main(String[] args) {
