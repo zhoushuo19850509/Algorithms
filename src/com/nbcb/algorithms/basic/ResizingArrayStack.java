@@ -139,13 +139,12 @@ public class ResizingArrayStack<Item> implements Iterable<Item>{
     public static void main(String[] args) {
         ResizingArrayStack<String> stack = new ResizingArrayStack<String>();
 
-
-        // pop()方式遍历stack
         for (int i = 0; i < 10; i++) {
             String element = String.valueOf(i);
             stack.push(element);
         }
 
+        // pop()方式遍历stack
         String str = "";
         while( null != (str = stack.pop()) ){
             System.out.println("pop() element from stack: " + str);
