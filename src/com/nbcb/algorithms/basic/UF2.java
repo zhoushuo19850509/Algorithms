@@ -18,7 +18,8 @@ package com.nbcb.algorithms.basic;
  * 4.节点n所属的component中，各个节点以树的形式进行组织，
  *   树的根节点是component id
  *
- * 这个算法的特点是，提升了union(p,q)的速度，
+ * 算法特点：
+ * 这个算法的特点是quick-union，提升了union(p,q)的速度，
  * 不用像UF.java中遍历array中各个节点
  *
  */
@@ -131,7 +132,7 @@ public class UF2 {
      * @param args
      */
     public static void main(String[] args) {
-        UF uf = new UF(10);
+        UF2 uf = new UF2(10);
         uf.union(4,3);
         uf.union(3,8);
         uf.union(6,5);

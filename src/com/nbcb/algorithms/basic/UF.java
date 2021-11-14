@@ -19,6 +19,12 @@ package com.nbcb.algorithms.basic;
  * 数组元素是该点对应的compoent标识，
  * 比如id[n]的值就是点n对应的component标识
  * 一旦两个点(p/q)连通了，就把p所属的component中所有点的数据改成id[q]
+ *
+ * 算法特点
+ * 这个算法的特点是quick-find，
+ * 顾名思义，就是find()操作非常快
+ * 但是这个算法的缺点是union()性能堪忧，复杂度是N
+ * 需要遍历array中各个节点
  */
 public class UF {
 
