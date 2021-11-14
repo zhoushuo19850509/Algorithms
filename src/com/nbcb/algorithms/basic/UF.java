@@ -2,7 +2,7 @@ package com.nbcb.algorithms.basic;
 
 /**
  * Algorithm 1.5
- * Union find implementation
+ * Union find implementation(version1.0)
  *
  * 所谓的union find，就是给定N个点，然后给定一组两点组合信息
  *
