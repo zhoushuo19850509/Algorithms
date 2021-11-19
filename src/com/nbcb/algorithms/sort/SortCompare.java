@@ -19,10 +19,13 @@ public class SortCompare {
         Stopwatch timer = new Stopwatch();
 
         if(alg.equals("SelectionSort")){
-            SelectionSort.sort(a);
+            (new SelectionSort()).sort(a);
         }
         if(alg.equals("InsertionSort")){
-            InsertionSort.sort(a);
+            (new InsertionSort()).sort(a);
+        }
+        if(alg.equals("ShellSort")){
+            (new ShellSort()).sort(a);
         }
 
         // 检查一下排序结果是否正确
@@ -62,11 +65,11 @@ public class SortCompare {
     public static void main(String[] args) {
 
         // 先指定两种sort算法
-        String alg1 = "InsertionSort";
-        String alg2 = "SelectionSort";
+        String alg1 = "ShellSort";
+        String alg2 = "InsertionSort";
 
         // N代表需要sort的数组有多少元素
-        int N = 1000;
+        int N = 100000;
 
         // T代表整个sort的动作要重复多少次
         int T = 100;
