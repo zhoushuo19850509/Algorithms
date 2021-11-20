@@ -12,6 +12,12 @@ package com.nbcb.algorithms.sort;
  * 保证那些保持gap距离的节点，都是排好序的
  * 然后逐步缩小gap范围，直到gap=1
  *
+ * 我们来看一下实际运行效果：
+ * t1: 2.2709999999999977
+ * t2: 784.1589999999998
+ * ShellSort is 345.3 times faster than InsertionSort
+ * 在数据量较大的情况下，ShellSort效率还是非常高的(2s内完成100次100000个节点的排序)
+ *
  */
 public class ShellSort extends SortBase{
 

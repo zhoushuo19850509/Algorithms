@@ -30,8 +30,25 @@ public abstract class SortBase {
      */
     public static void show(Comparable[] a){
         for (int i = 0; i < a.length; i++) {
-            System.out.println(a[i]);
+            System.out.print(a[i] + " ");
         }
+        System.out.println();
+    }
+
+    public static String printArray(Comparable[] a){
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < a.length; i++) {
+            sb.append("[" + i + "]" +a[i].toString());
+        }
+        return sb.toString();
+    }
+
+    public static String printArray(Comparable[] a , int lo, int hi){
+        StringBuilder sb = new StringBuilder();
+        for (int i = lo; i <= hi; i++) {
+            sb.append(a[i].toString());
+        }
+        return sb.toString();
     }
 
     /**

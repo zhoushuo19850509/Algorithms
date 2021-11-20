@@ -27,6 +27,9 @@ public class SortCompare {
         if(alg.equals("ShellSort")){
             (new ShellSort()).sort(a);
         }
+        if(alg.equals("MergeSort")){
+            (new MergeSort()).sort(a);
+        }
 
         // 检查一下排序结果是否正确
         if(!InsertionSort.isSort(a)){
@@ -65,8 +68,8 @@ public class SortCompare {
     public static void main(String[] args) {
 
         // 先指定两种sort算法
-        String alg1 = "ShellSort";
-        String alg2 = "InsertionSort";
+        String alg1 = "MergeSort";
+        String alg2 = "ShellSort";
 
         // N代表需要sort的数组有多少元素
         int N = 100000;
@@ -80,7 +83,7 @@ public class SortCompare {
         System.out.println("t1: " + t1);
         System.out.println("t2: " + t2);
 
-        System.out.printf("%s is %.1f times faster than $s",alg1, (t2/t1) ,alg2);
+        System.out.printf("%s is %.1f times faster than %s",alg1, (t2/t1) ,alg2);
 
     }
 }
