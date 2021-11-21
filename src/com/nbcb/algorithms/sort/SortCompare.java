@@ -30,6 +30,9 @@ public class SortCompare {
         if(alg.equals("MergeSort")){
             (new MergeSort()).sort(a);
         }
+        if(alg.equals("JavaSort")){
+            (new JavaSort()).sort(a);
+        }
 
         // 检查一下排序结果是否正确
         if(!InsertionSort.isSort(a)){
@@ -58,6 +61,10 @@ public class SortCompare {
             for (int n = 0; n < N; n++) {
                 a[n] = StdRandom.uniform();
             }
+            // 某些场景需要对随机数组进行一下处理
+            // 比如我们要验证反向排好序的数组
+//            SortBase.reverseSort(a);
+
             // 调用alg算法，对a[]进行排序
             total += time(alg, a);
         }
@@ -69,7 +76,7 @@ public class SortCompare {
 
         // 先指定两种sort算法
         String alg1 = "MergeSort";
-        String alg2 = "ShellSort";
+        String alg2 = "JavaSort";
 
         // N代表需要sort的数组有多少元素
         int N = 100000;

@@ -1,5 +1,10 @@
 package com.nbcb.algorithms.sort;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public abstract class SortBase {
 
     /**
@@ -35,20 +40,16 @@ public abstract class SortBase {
         System.out.println();
     }
 
-    public static String printArray(Comparable[] a){
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < a.length; i++) {
-            sb.append("[" + i + "]" +a[i].toString());
-        }
-        return sb.toString();
-    }
+    // 对array进行反向排序
+    public static void reverseSort(Comparable[] a){
+        // sort the array
+        Arrays.sort(a);
 
-    public static String printArray(Comparable[] a , int lo, int hi){
-        StringBuilder sb = new StringBuilder();
-        for (int i = lo; i <= hi; i++) {
-            sb.append(a[i].toString());
+        // reverse it
+        int mid = a.length / 2;
+        for (int i = 0; i < mid; i++) {
+            exch(a, i, a.length -1 - i);
         }
-        return sb.toString();
     }
 
     /**
@@ -63,6 +64,16 @@ public abstract class SortBase {
             }
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        String[] a = "S O R T E X A M P L E".split(" ");
+        System.out.println("before reverse");
+        show(a);
+
+        SortBase.reverseSort(a);
+        System.out.println("after reverse");
+        show(a);
     }
 
 }
