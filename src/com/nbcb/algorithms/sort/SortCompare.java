@@ -33,6 +33,9 @@ public class SortCompare {
         if(alg.equals("JavaSort")){
             (new JavaSort()).sort(a);
         }
+        if(alg.equals("QuickSort")){
+            (new QuickSort()).sort(a);
+        }
 
         // 检查一下排序结果是否正确
         if(!InsertionSort.isSort(a)){
@@ -74,9 +77,14 @@ public class SortCompare {
 
     public static void main(String[] args) {
 
-        // 先指定两种sort算法
+        /**
+         * 先指定两种sort算法
+         * 备注：可以用于比较的sort算法包括：
+         * MergeSort
+         * JavaSort
+         */
         String alg1 = "MergeSort";
-        String alg2 = "JavaSort";
+        String alg2 = "QuickSort";
 
         // N代表需要sort的数组有多少元素
         int N = 100000;
