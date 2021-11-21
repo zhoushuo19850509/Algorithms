@@ -1,6 +1,5 @@
 package com.nbcb.algorithms.sort;
 
-import edu.princeton.cs.algs4.Quick;
 import edu.princeton.cs.algs4.StdRandom;
 
 /**
@@ -11,7 +10,7 @@ import edu.princeton.cs.algs4.StdRandom;
  * 2.然后遍历这个array，把所有小于等于Node的节点放到left array
  *   把所有大于Node的节点放到right array
  * 3.然后分别对left array和right array进行排序，排序策略同上
- * 4.等left array和right array都排好序之后，真个array就已经排完序了
+ * 4.等left array和right array都排好序之后，整个array就已经排完序了
  */
 public class QuickSort extends SortBase{
 
