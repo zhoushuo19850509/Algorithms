@@ -36,6 +36,9 @@ public class SortCompare {
         if(alg.equals("QuickSort")){
             (new QuickSort()).sort(a);
         }
+        if(alg.equals("HeapSort")){
+            (new HeapSort()).sort(a);
+        }
 
         // 检查一下排序结果是否正确
         if(!InsertionSort.isSort(a)){
@@ -84,7 +87,7 @@ public class SortCompare {
          * JavaSort
          */
         String alg1 = "MergeSort";
-        String alg2 = "QuickSort";
+        String alg2 = "HeapSort";
 
         // N代表需要sort的数组有多少元素
         int N = 100000;
