@@ -9,7 +9,7 @@ import java.util.Iterator;
  * 要实现get(key)接口，就是遍历这个list
  * 显然这个ST实现的效率应该不会很高
  */
-public class SequentialSearchST <Key, Value>{
+public class SequentialSearchST <Key, Value> implements ST<Key, Value>{
 
     private Node first; // list第一个节点
     int N = 0;  // ST中有多少key/value节点
@@ -68,9 +68,13 @@ public class SequentialSearchST <Key, Value>{
         N++;
     }
 
-    public boolean constains(Key key){
+
+    public boolean contains(Key key){
         return null != get(key);
     }
+
+
+
 
     /**
      * ST是否为空

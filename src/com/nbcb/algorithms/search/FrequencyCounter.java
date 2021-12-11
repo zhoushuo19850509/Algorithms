@@ -21,7 +21,7 @@ import java.util.Iterator;
 public class FrequencyCounter {
     public static void main(String[] args) {
 
-        SequentialSearchST<String, Integer> st = new SequentialSearchST<>();
+        ST<String, Integer> st = new SequentialSearchST<>();
         int minLen = 2;  //字符串长度至少达到minLen，否则不予统计
 
         String filePath = "/Users/zhoushuo/Documents/tmp/a.txt";
@@ -55,7 +55,7 @@ public class FrequencyCounter {
                     }
 
 //                    System.out.println(word);
-                    if(!st.constains(word)){
+                    if(!st.contains(word)){
                         st.put(word,0);
                     }else{
                         st.put(word, st.get(word) + 1);
